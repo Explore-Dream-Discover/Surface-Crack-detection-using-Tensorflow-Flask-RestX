@@ -7,8 +7,8 @@ import random
 import os
 
 
-app = Flask(__name__)
-api = Api(app, version='1.0',
+server= Flask(__name__)
+server_api = Api(app, version='1.0',
           title='Surface crack detection ',
           description='cnn and vgg16')
 upload_parser = api.parser()
@@ -20,8 +20,8 @@ upload_parser.add_argument('file', location='files',
 
 
 
-@api.route('/model_Cnn/')
-@api.expect(upload_parser)
+@server_api.route('/model_Cnn/')
+@server_api.expect(upload_parser)
 class Model_Cnn(Resource):
     def post(self):
         
