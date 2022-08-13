@@ -17,8 +17,17 @@ https://detect-crack-api.herokuapp.com
 
 
 #Positive Prediction
+
+
+
 ![image](https://user-images.githubusercontent.com/104477667/184502472-97f9d598-83d6-4872-a795-b28d962e16a7.png)
+
+
+
 #Negative Prediction
+
+
+
 ![image](https://user-images.githubusercontent.com/104477667/184502524-5212fe5f-5a0c-4dc5-a00c-2e134d40fae8.png)
 
 
