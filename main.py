@@ -14,7 +14,7 @@ api = Api(app, version='1.0',
 
 ns = api.namespace('Note', 
                    description="Model constructed using Convolution neural network")
-upload_parser = ns.parser()
+upload_parser = api.parser()
 upload_parser.add_argument('file', location='files',
                            type=FileStorage, required=True)
 
@@ -23,8 +23,8 @@ upload_parser.add_argument('file', location='files',
 
 
 
-@ns.route('/model_Cnn/')
-@ns.expect(upload_parser)
+@api.route('/model_Cnn/')
+@api.expect(upload_parser)
 class Model_Cnn(Resource):
     def post(self):
         
