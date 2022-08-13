@@ -12,7 +12,7 @@ api = Api(app, version='1.0',
           title='Surface crack detection ',
           description='cnn and vgg16')
 
-api.namespace('Note 
+api.namespace('Note', 
                    description="Whatever your namespace is Please upload the wall's visual image.")
 upload_parser = api.parser()
 upload_parser.add_argument('file', location='files',
