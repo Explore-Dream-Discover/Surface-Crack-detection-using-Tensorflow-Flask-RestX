@@ -12,9 +12,9 @@ api = Api(app, version='1.0',
           title='Surface crack detection ',
           description='cnn and vgg16')
 
-api.namespace('Note', 
+ns = api.namespace('Note', 
                    description="Whatever your namespace is Please upload the wall's visual image.")
-upload_parser = api.parser()
+upload_parser = ns.parser()
 upload_parser.add_argument('file', location='files',
                            type=FileStorage, required=True)
 
@@ -23,8 +23,8 @@ upload_parser.add_argument('file', location='files',
 
 
 
-@api.route('/model_Cnn/')
-@api.expect(upload_parser)
+@ns.route('/model_Cnn/')
+@ns.expect(upload_parser)
 class Model_Cnn(Resource):
     def post(self):
         
